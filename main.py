@@ -32,7 +32,6 @@ class Rectangle:
         self.x = x
 
     def draw(self, canvas):
-
         canvas.data[self.x : self.x + self.width, self.y : self.y+ self.height] = self.color
 
 
@@ -45,9 +44,11 @@ class Square:
         self.x = x
 
     def draw(self, canvas):
-        pass
+        canvas.data[self.x : self.x + self.side, self.y : self.y+ self.side] = self.color
 
 my_canvas = Canvas(1000,1000,(255,255,255))
 my_rectangle = Rectangle(x=500, y=500, height=120, width=200, color=(0, 0, 200))
 my_rectangle.draw(my_canvas)
+my_square = Square(x=0, y=500, side=50, color=(250,0,0))
+my_square.draw(my_canvas)
 my_canvas.make("my_canvas.png")
