@@ -7,4 +7,4 @@ class Square:
         self.x = x
 
     def draw(self, canvas):
-        canvas.data[self.x : self.x + self.side, self.y : self.y+ self.side] = self.color
+        canvas.data[self.y : self.y+ self.side, self.x : self.x + self.side] = self.color

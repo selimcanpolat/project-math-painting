@@ -8,4 +8,4 @@ class Rectangle:
         self.x = x
 
     def draw(self, canvas):
-        canvas.data[self.x : self.x + self.width, self.y : self.y+ self.height] = self.color
+        canvas.data[self.y : self.y+ self.height, self.x : self.x + self.width] = self.color
